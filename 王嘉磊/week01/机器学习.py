@@ -20,5 +20,8 @@ client = OpenAI(
 
 def text_calssify_using_ml(text: str) -> str:
   test_sentence = " ".join(jieba.lcut(text))
-    test_feature = vector.transform([test_sentence])
-    return model.predict(test_feature)[0]
+  test_feature = vector.transform([test_sentence])
+  return model.predict(test_feature)[0]
+if __name__ == "__main__":
+ print("2222")
+ print("机器学习: ", text_calssify_using_ml("帮我导航到天安门"))
